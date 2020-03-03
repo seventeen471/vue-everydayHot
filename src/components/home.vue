@@ -252,31 +252,31 @@
 <style scoped>
 .top{
   width: 100%;
-  height: 50px;
+  height: 1.333rem;
   background-color: darkturquoise;
   position: fixed;
   z-index: 999;
 }
 .topbarImg{
-    width: 30px;
-    height: 30px;
+    width: 0.8rem;
+    height: 0.8rem;
     position: fixed;
     top: 0;
-    margin: 10px 10px;
+    margin: 0.267rem 0.267rem;
   }
   .message{
     right: 0;
   }
   .today{
     position: fixed;
-    top: 10px;
+    top: 0.267rem;
     left: 40%;
-    font-size: 20px;
+    font-size: 0.533rem;
   }
   .hot-story{
     width: 100%;
-    height: 220px;
-    padding-top: 50px;
+    height: 5.867rem;
+    padding-top: 1.333rem;
     background-color: #ccc;
     position: relative;
     overflow: hidden;
@@ -289,26 +289,26 @@
 }
 .itemP{
   width: 100%;
-  height: 50px;
-  height: 50px;
+  height: 1.333rem;
+  height: 1.333rem;
   display: block;
   background-color: rgba(0,0,0,0.3);
   position: absolute;
   bottom: 0;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-left: 0.267rem;
+  padding-top: 0.267rem;
   color: #fff;
-  font-size: 19px;
+  font-size: 0.507rem;
 }
   .all-story{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.267rem;
   }
   .all-story ul li{
     width: 95%;
-    height: 80px;
-    margin: 10px;
-    box-shadow: 0 0 5px 0 #888888;
+    height: 2.133rem;
+    margin: 0.267rem;
+    box-shadow: 0 0 0.133rem 0 #888888;
     border-radius: 2%;
   }
 .all-story ul li .title{
@@ -317,113 +317,113 @@
   float: left;
 }
 .all-story ul li .title span{
-  width: 250px;
-  height: 24px;
+  width: 6.667rem;
+  height: 0.64rem;
   overflow: hidden;
-  padding: 20px;
+  padding: 0.533rem;
   display: inline-block;
-  font-size: 17px;
+  font-size: 0.453rem;
 }
 .all-story ul li img{
   width: 20%;
-  height: 60px;
+  height: 1.6rem;
   float: right;
-  margin-top: 10px;
-  margin-right: 12px;
+  margin-top: 0.267rem;
+  margin-right: 0.32rem;
 }
   .bottom{
     display: flex;
     width: 100%;
   }
 .head{
-  width: 376px;
-  height: 60px;
+  width: 10.027rem;
+  height: 1.6rem;
 }
 .msgContent{
-    width: 376px;
-    height: 752px;
+    width: 10.027rem;
+    height: 20.053rem;
   }
 .head img{
   position: absolute;
-  top: 20px;
-  left: 10px;
-  width: 30px;
-  height: 30px;
+  top: 0.533rem;
+  left: 0.267rem;
+  width: 0.8rem;
+  height: 0.8rem;
 }
   .head p{
     text-align: center;
-    font-size: 21px;
-    margin-top: 20px;
+    font-size: 0.56rem;
+    margin-top: 0.533rem;
   }
   .head span{
     position: absolute;
     width: 50%;
-    height: 40px;
-    font-size: 20px;
-    top: 70px;
+    height: 1.067rem;
+    font-size: 0.533rem;
+    top: 1.867rem;
     text-align: center;
-    line-height: 40px;
+    line-height: 1.067rem;
     color: black;
   }
   .head .tongzhi{
     left: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 0.027rem solid black;
   }
 .head .sixin{
   right: 0;
 }
   .myMenuDiv .font{
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 20px;
+    font-size: 0.533rem;
+    margin-left: 1.333rem;
+    margin-top: 0.533rem;
   }
 .myMenuDiv img{
-  width:20px;
-  height: 20px;
+  width: 0.533rem;
+  height: 0.533rem;
   position: absolute;
 }
 .myMenuDiv .homeImg{
-  top: 23px;
-  left: 20px;
+  top: 0.613rem;
+  left: 0.533rem;
 }
 .myMenuDiv .aboutImg{
-  top: 72px;
-  left: 20px;
+  top: 1.92rem;
+  left: 0.533rem;
 }
 .myMenuDiv .moreImg{
-  top: 117px;
-  left: 20px;
+  top: 3.12rem;
+  left: 0.533rem;
 }
 .myMenuDiv span{
-  margin-left: 65px;
+  margin-left: 1.733rem;
 }
   .menuContent{
-    width: 200px;
-    height: 672px;
+    width: 5.333rem;
+    height: 17.92rem;
   }
   .myMenuDiv .setingImg{
-    width: 33px;
-    height: 33px;
+    width: 0.88rem;
+    height: 0.88rem;
     position: absolute;
-    top: 720px;
-    left: 20px;
+    top: 19.2rem;
+    left: 0.533rem;
   }
 .myMenuDiv .quitImg{
-  width: 25px;
-  height: 25px;
+  width: 0.667rem;
+  height: 0.667rem;
   position: absolute;
-  top: 725px;
-  left: 90px;
+  top: 19.333rem;
+  left: 2.4rem;
 }
 .myMenuDiv .setingText{
   position: absolute;
-  top:730px;
-  left: -36px;
+  top: 19.467rem;
+  left: -0.96rem;
 }
 .myMenuDiv .quitText{
   position: absolute;
-  top:730px;
-  left: 32px;
+  top: 19.467rem;
+  left: 0.853rem;
 }
   .loading{
     margin: auto;

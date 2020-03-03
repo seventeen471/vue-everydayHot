@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from'./store'
-Vue.config.productionTip = false
+import flexible from './flexible'
+Vue.use(flexible);
+Vue.config.productionTip = false;
 if (module.hot) {
   module.hot.accept();
 }

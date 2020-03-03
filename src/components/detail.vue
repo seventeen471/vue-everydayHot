@@ -63,69 +63,69 @@
   .head{
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 1.333rem;
     background-color: rgba(250,250,250,0.8);
   }
 .box{
   width: 100%;
-  height: 220px;
+  height: 5.867rem;
 }
   .left{
     position: fixed;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
+    left: 0.267rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.133rem;
   }
   .right{
     position: fixed;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    margin: 5px;
+    right: 0.267rem;
+    width: 0.933rem;
+    height: 0.933rem;
+    margin: 0.133rem;
   }
 .itemImg{
   width: 100%;
   height: 100%;
-  margin-bottom: -10px;
+  margin-bottom: -0.267rem;
 }
 .itemP{
   width: 100%;
-  height: 35px;
+  height: 0.933rem;
   display: block;
   text-align: center;
   color: #000;
-  font-size: 20px;
-  margin-top: 12px;
+  font-size: 0.533rem;
+  margin-top: 0.32rem;
 }
 .head span{
     position: fixed;
     top: 0;
     left: 42%;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 0.533rem;
+    margin-top: 0.267rem;
 
   }
   .share-box{
-    width: 375px;
-    height: 130px;
+    width: 10rem;
+    height: 3.467rem;
     background-color: rgba(255,255,255,0.5);
   }
   .share-box p{
     text-align: center;
-    padding-top: 5px;
+    padding-top: 0.133rem;
   }
   .share-box ul li{
     float: left;
-    padding: 10px;
+    padding: 0.267rem;
   }
   .share-box ul li img{
-    width: 70px;
-    height: 50px;
+    width: 1.867rem;
+    height: 1.333rem;
   }
   .share-box span{
-    margin: 8px;
-    padding: 20px;
+    /*margin: 1.867rem;*/
+    padding: 1.02rem;
   }
 </style>
 <style scoped>
@@ -195,12 +195,12 @@
   h4,
   h5,
   h6 {
-    font-size: 16px;
+    font-size: 0.427rem;
   }
 
   .body >>>
   abbr[title] {
-    border-bottom: 1px dotted;
+    border-bottom: 0.027rem dotted;
   }
 
   .body >>>
@@ -273,8 +273,8 @@
 
   .body >>>
   fieldset {
-    border: 1px solid silver;
-    margin: 0 2px;
+    border: 0.027rem solid silver;
+    margin: 0 0.053rem;
     padding: .35em .625em .75em;
   }
 
@@ -298,7 +298,7 @@
 
   .body >>>
   blockquote {
-    border-left: 3px solid #D0E5F2;
+    border-left: 0.08rem solid #D0E5F2;
     font-style: normal;
     display: block;
     vertical-align: baseline;
@@ -310,13 +310,13 @@
   .body >>>
   ul,
   ol {
-    padding-left: 20px;
+    padding-left: 0.533rem;
   }
 
   .body >>>
   .main-wrap {
     max-width: 100%;
-    min-width: 300px;
+    min-width: 8rem;
     margin: 0 auto;
   }
 
@@ -333,12 +333,12 @@
 
   .body >>>
   .headline {
-    border-bottom: 4px solid #f6f6f6;
+    border-bottom: 0.107rem solid #f6f6f6;
   }
 
   .body >>>
   .headline-title.onlyheading {
-    margin: 20px 0;
+    margin: 0.533rem 0;
   }
 
   .body >>>
@@ -352,36 +352,36 @@
     line-height: 2em;
     position: relative;
     display: block;
-    padding: 20px 45px 20px 20px !important;
+    padding: 0.533rem 1.2rem 0.533rem 0.533rem !important;
   }
 
   .body >>>
   .icon-arrow-right {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 0.533rem;
     background-image: url(http://static.daily.zhihu.com/img/share-icons.png);
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-    background-position: -70px -20px;
-    width: 10px;
-    height: 15px;
-    margin-top: -7.5px;
+    background-position: -1.867rem -0.533rem;
+    width: 0.267rem;
+    height: 0.4rem;
+    margin-top: -0.2rem;
   }
 
   .body >>>
   .headline-background .heading {
     color: #999;
-    font-size: 15px !important;
-    margin-bottom: 8px;
+    font-size: 0.4rem !important;
+    margin-bottom: 0.213rem;
     line-height: 1em;
   }
 
   .body >>>
   .headline-background .heading-content {
     color: #444;
-    font-size: 17px !important;
+    font-size: 0.453rem !important;
     line-height: 1.2em;
   }
 
@@ -389,9 +389,9 @@
   .headline-title {
     line-height: 1.2em;
     color: #000;
-    font-size: 22px;
-    margin: 20px 0 10px;
-    padding: 0 20px !important;
+    font-size: 0.587rem;
+    margin: 0.533rem 0 0.267rem;
+    padding: 0 0.533rem !important;
     font-weight: bold;
   }
 
@@ -400,47 +400,47 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-size: 16px;
+    font-size: 0.427rem;
     color: #b8b8b8;
   }
 
   .body >>>
   .meta .source-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
+    width: 0.533rem;
+    height: 0.533rem;
+    margin-right: 0.107rem;
   }
 
   .body >>>
   .meta .time {
     float: right;
-    margin-top: 2px;
+    margin-top: 0.053rem;
   }
 
   .body >>>
   .content {
     color: #444;
     line-height: 1.6em;
-    font-size: 17px;
-    margin: 10px 0 20px;
+    font-size: 0.453rem;
+    margin: 0.267rem 0 0.533rem;
   }
 
   .body >>>
   .content img {
     max-width: 100%;
     display: block;
-    margin: 30px auto;
+    margin: 0.8rem auto;
   }
 
   .body >>>
   .content img + img {
-    margin-top: 15px;
+    margin-top: 0.4rem;
   }
 
   .body >>>
   .content img[src*="zhihu.com/equation"] {
     display: inline-block;
-    margin: 0 3px;
+    margin: 0 0.08rem;
   }
 
   .body >>>
@@ -455,17 +455,17 @@
 
   .body >>>
   .view-more {
-    margin-bottom: 25px;
+    margin-bottom: 0.667rem;
     text-align: center;
   }
 
   .body >>>
   .view-more a {
-    font-size: 16px;
+    font-size: 0.427rem;
     display: inline-block;
-    width: 125px;
-    height: 30px;
-    line-height: 30px;
+    width: 3.333rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
     background: #f0f0f0;
     color: #B8B8B8;
   }
@@ -473,12 +473,12 @@
   .body >>>
   .question {
     overflow: hidden;
-    padding: 0 20px !important;
+    padding: 0 0.533rem !important;
   }
 
   .body >>>
   .question + .question {
-    border-top: 5px solid #f6f6f6;
+    border-top: 0.133rem solid #f6f6f6;
   }
 
   .body >>>
@@ -486,8 +486,8 @@
     line-height: 1.4em;
     color: #000;
     font-weight: 700;
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 0.48rem;
+    margin: 0.533rem 0;
   }
 
   .body >>>
@@ -498,16 +498,16 @@
 
   .body >>>
   .answer + .answer {
-    border-top: 2px solid #f6f6f6;
-    padding-top: 20px;
+    border-top: 0.053rem solid #f6f6f6;
+    padding-top: 0.533rem;
   }
 
   .body >>>
   .footer {
     text-align: center;
     color: #b8b8b8;
-    font-size: 13px;
-    padding: 20px 0;
+    font-size: 0.347rem;
+    padding: 0.533rem 0;
   }
 
   .body >>>
@@ -528,33 +528,33 @@
 
   .body >>>
   .comment-label {
-    font-size: 16px;
+    font-size: 0.427rem;
     color: #333;
     line-height: 1.5em;
     font-weight: 700;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-top: 0.027rem solid #eee;
+    border-bottom: 0.027rem solid #eee;
     margin: 0;
-    padding: 9px 20px;
+    padding: 0.24rem 0.533rem;
   }
 
   .body >>>
   .comment-list {
-    margin-bottom: 20px;
+    margin-bottom: 0.533rem;
   }
 
   .body >>>
   .comment-item {
-    font-size: 15px;
+    font-size: 0.4rem;
     color: #666;
-    border-bottom: 1px solid #eee;
-    padding: 15px 20px;
+    border-bottom: 0.027rem solid #eee;
+    padding: 0.4rem 0.533rem;
   }
 
   .body >>>
   .comment-meta {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0.267rem;
   }
 
   .body >>>
@@ -567,21 +567,21 @@
   .comment-meta .vote {
     position: absolute;
     color: #b8b8b8;
-    font-size: 12px;
+    font-size: 0.32rem;
     right: 0;
   }
 
   .body >>>
   .night .comment-label {
     color: #b8b8b8;
-    border-top: 1px solid #303030;
-    border-bottom: 1px solid #303030;
+    border-top: 0.027rem solid #303030;
+    border-bottom: 0.027rem solid #303030;
   }
 
   .body >>>
   .night .comment-item {
     color: #7f7f7f;
-    border-bottom: 1px solid #303030;
+    border-bottom: 0.027rem solid #303030;
   }
 
   .body >>>
@@ -590,9 +590,9 @@
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: 0;
-    width: 11px;
-    height: 12px;
-    margin-right: 4px;
+    width: 0.293rem;
+    height: 0.32rem;
+    margin-right: 0.107rem;
     background-image: url(http://static.daily.zhihu.com/img/app/Comment_Vote.png) !important;
   }
 
@@ -608,13 +608,13 @@
 
   .body >>>
   .img-wrap .headline-title {
-    bottom: 5px;
+    bottom: 0.133rem;
   }
 
   .body >>>
   .img-wrap .img-source {
-    right: 10px !important;
-    font-size: 9px;
+    right: 0.267rem !important;
+    font-size: 0.24rem;
   }
 
   .body >>>
@@ -624,7 +624,7 @@
 
   .body >>>
   .button {
-    width: 60px;
+    width: 1.6rem;
   }
 
   .body >>>
@@ -634,19 +634,19 @@
 
   .body >>>
   .headline .img-place-holder {
-    height: 62px;
+    height: 1.653rem;
   }
 
   .body >>>
   .from-column {
-    width: 280px;
-    line-height: 30px;
-    height: 30px;
-    padding-left: 90px;
+    width: 7.467rem;
+    line-height: 0.8rem;
+    height: 0.8rem;
+    padding-left: 2.4rem;
     color: #2aacec;
     background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance.png);
     box-sizing: border-box;
-    margin: 0 20px 20px;
+    margin: 0 0.533rem 0.533rem;
   }
 
   .body >>>
@@ -656,7 +656,7 @@
 
   .body >>>
   .night .headline {
-    border-bottom: 4px solid #303030;
+    border-bottom: 0.107rem solid #303030;
   }
 
   .body >>>
@@ -672,12 +672,12 @@
 
   .body >>>
   .night .answer + .answer {
-    border-top: 2px solid #303030;
+    border-top: 0.053rem solid #303030;
   }
 
   .body >>>
   .night .question + .question {
-    border-top: 4px solid #303030;
+    border-top: 0.107rem solid #303030;
   }
 
   .body >>>
@@ -692,15 +692,15 @@
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-    background-position: -70px -35px;
-    width: 10px;
-    height: 15px;
+    background-position: -1.867rem -0.933rem;
+    width: 0.267rem;
+    height: 0.4rem;
   }
 
   .body >>>
   .night blockquote,
   .night sup {
-    border-left: 3px solid #666;
+    border-left: 0.08rem solid #666;
   }
 
   .body >>>
@@ -721,17 +721,17 @@
 
   .body >>>
   .large .question-title {
-    font-size: 24px;
+    font-size: 0.64rem;
   }
 
   .body >>>
   .large .meta {
-    font-size: 18px;
+    font-size: 0.48rem;
   }
 
   .body >>>
   .large .content {
-    font-size: 20px;
+    font-size: 0.533rem;
   }
 
   .body >>>
@@ -749,7 +749,7 @@
     text-overflow: ellipsis;
     display: inline-block;
     color: #929292;
-    margin-right: 7px;
+    margin-right: 0.187rem;
   }
 
   .body >>>
@@ -757,19 +757,19 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-size: 11px;
+    font-size: 0.293rem;
     color: #b8b8b8;
-    margin: 15px 0;
-    padding: 0 20px;
+    margin: 0.4rem 0;
+    padding: 0 0.533rem;
   }
 
   .body >>>
   .headline .meta a,
   .headline .meta a:hover {
     padding-left: 1em;
-    margin-top: 2px;
+    margin-top: 0.053rem;
     float: right;
-    font-size: 11px;
+    font-size: 0.293rem;
     color: #0066cf;
     text-decoration: none;
   }
@@ -783,8 +783,8 @@
 
   .body >>>
   .highlight::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 0.16rem;
+    height: 0.16rem;
   }
 
   .body >>>
@@ -794,7 +794,7 @@
 
   .body >>>
   .highlight::-webkit-scrollbar-thumb:horizontal {
-    border-radius: 6px;
+    border-radius: 0.16rem;
     background-color: rgba(0, 0, 0, .5);
   }
 
@@ -906,10 +906,10 @@
   .body >>>
   .meta .avatar,
   .comment-meta .avatar {
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-    margin-right: 5px;
+    width: 0.533rem;
+    height: 0.533rem;
+    border-radius: 0.053rem;
+    margin-right: 0.133rem;
   }
 
   .body >>>
@@ -1010,7 +1010,7 @@
   .answer h3,
   .answer h4,
   .answer h5 {
-    font-size: 19px;
+    font-size: 0.507rem;
   }
 
   .body >>>
@@ -1021,7 +1021,7 @@
     text-overflow: ellipsis;
     display: inline-block;
     color: #929292;
-    margin-right: 7px;
+    margin-right: 0.187rem;
   }
 
   .body >>>
@@ -1029,18 +1029,18 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-size: 11px;
+    font-size: 0.293rem;
     color: #b8b8b8;
-    margin: 20px 0;
-    padding: 0 20px;
+    margin: 0.533rem 0;
+    padding: 0 0.533rem;
   }
 
   .body >>>
   .headline .meta a,
   .headline .meta a:hover {
-    margin-top: 2px;
+    margin-top: 0.053rem;
     float: right;
-    font-size: 11px;
+    font-size: 0.293rem;
     color: #0066cf;
     text-decoration: none;
   }
@@ -1051,15 +1051,15 @@
   .answer h3,
   .answer h4,
   .answer h5 {
-    font-size: 19px;
+    font-size: 0.507rem;
   }
 
   .body >>>
   .origin-source,
   a.origin-source:link {
     display: block;
-    margin: 25px 0;
-    height: 50px;
+    margin: 0.667rem 0;
+    height: 1.333rem;
     overflow: hidden;
     background: #f0f0f0;
     color: #888;
@@ -1071,17 +1071,17 @@
   .origin-source .source-logo,
   a.origin-source:link .source-logo {
     float: left;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 1.333rem;
+    height: 1.333rem;
+    margin-right: 0.267rem;
   }
 
   .body >>>
   .origin-source .text,
   a.origin-source:link .text {
-    line-height: 50px;
-    height: 50px;
-    font-size: 13px;
+    line-height: 1.333rem;
+    height: 1.333rem;
+    font-size: 0.347rem;
   }
 
   .body >>>
@@ -1094,12 +1094,12 @@
     display: block;
     position: absolute;
     border-color: transparent transparent transparent #f0f0f0;
-    border-width: 7px;
+    border-width: 0.187rem;
     border-style: solid;
     height: 0;
     width: 0;
-    top: 18px;
-    right: 4px;
+    top: 0.48rem;
+    right: 0.107rem;
     line-height: 0;
     content: "";
   }
@@ -1110,10 +1110,10 @@
     height: 0;
     width: 0;
     position: absolute;
-    top: 18px;
-    right: 3px;
+    top: 0.48rem;
+    right: 0.08rem;
     border-color: transparent transparent transparent #000;
-    border-width: 7px;
+    border-width: 0.187rem;
     border-style: solid;
     line-height: 0;
     content: "";
@@ -1130,12 +1130,12 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 45px;
+    width: 1.2rem;
     color: #00a2ed;
-    height: 50px;
+    height: 1.333rem;
     display: none;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.32rem;
     -webkit-touch-callout: none;
   }
 
@@ -1143,10 +1143,10 @@
   .origin-source-wrap .focus-link .btn-label {
     text-align: center;
     display: block;
-    margin-top: 8px;
-    border-left: solid 1px #ccc;
-    height: 34px;
-    line-height: 34px;
+    margin-top: 0.213rem;
+    border-left: solid 0.027rem #ccc;
+    height: 0.907rem;
+    line-height: 0.907rem;
   }
 
   .body >>>
@@ -1172,7 +1172,7 @@
 
   .body >>>
   .night .origin-source-wrap .btn-label {
-    border-left: solid 1px #3f3f3f;
+    border-left: solid 0.027rem #3f3f3f;
   }
 
   .body >>>
@@ -1207,7 +1207,7 @@
   .body >>>
   blockquote {
     color: #9da3a6;
-    border-left: 3px solid #Dfe3e6;
+    border-left: 0.08rem solid #Dfe3e6;
   }
 
   .body >>>
@@ -1217,7 +1217,7 @@
 
   .body >>>
   .content {
-    font-size: 17px;
+    font-size: 0.453rem;
     color: #616466;
   }
 
@@ -1228,13 +1228,13 @@
 
   .body >>>
   hr {
-    margin: 30px 0;
+    margin: 0.8rem 0;
     border-top-width: 0;
   }
 
   .body >>>
   p {
-    margin: 20px 0 !important;
+    margin: 0.533rem 0 !important;
   }
 
   .body >>>
@@ -1279,12 +1279,12 @@
 
   .body >>>
   .dudu-night .answer + .answer {
-    border-top: 2px solid #27282b;
+    border-top: 0.053rem solid #27282b;
   }
 
   .body >>>
   .dudu-night .question + .question {
-    border-top: 4px solid #27282b;
+    border-top: 0.107rem solid #27282b;
   }
 
   .body >>>
@@ -1299,15 +1299,15 @@
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-    background-position: -70px -35px;
-    width: 10px;
-    height: 15px;
+    background-position: -1.867rem -0.933rem;
+    width: 0.267rem;
+    height: 0.4rem;
   }
 
   .body >>>
   .dudu-night blockquote,
   .dudu-night sup {
-    border-left: 3px solid #2e3033;
+    border-left: 0.08rem solid #2e3033;
     color: #555659;
   }
 

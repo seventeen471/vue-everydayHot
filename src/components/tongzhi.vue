@@ -14,28 +14,28 @@
 
 <style scoped>
 #tongzhi img{
-  width: 150px;
-  height: 150px;
+  width: 4rem;
+  height: 4rem;
   position: absolute;
-  top: 150px;
-  left: 115px;
+  top: 4rem;
+  left: 3.067rem;
   opacity: 0.2;
 }
   #tongzhi h3{
     position: absolute;
-    top: 310px;
-    left: 105px;
+    top: 8.267rem;
+    left: 2.8rem;
     opacity: 0.4;
     text-align: center;
-    font-size: 25px;
+    font-size: 0.667rem;
   }
 #tongzhi article{
   position: absolute;
-  top: 340px;
-  left: 0px;
+  top: 9.067rem;
+  left: 0;
   opacity: 0.5;
   text-align: center;
-  font-size: 20px;
-  margin: 20px;
+  font-size: 0.533rem;
+  margin: 0.533rem;
 }
 </style>
