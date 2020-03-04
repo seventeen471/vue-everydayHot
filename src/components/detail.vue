@@ -22,7 +22,7 @@
             <li><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2584811240,193084535&fm=26&gp=0.jpg"></li>
           </ul>
           <div class="APPnames">
-          <span>微信</span><span>朋友圈</span><span>QQ</span><span>空间</span>
+<!--          <span>微信</span><span>朋友圈</span><span>QQ</span><span>空间</span>-->
           </div>
         </div>
       </mt-popup>
