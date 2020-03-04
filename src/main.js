@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import store from'./store'
 import flexible from './flexible'
+import VueJsonp from 'vue-jsonp'
+Vue.use(VueJsonp);
 Vue.use(flexible);
 Vue.config.productionTip = false;
 if (module.hot) {

@@ -14,10 +14,10 @@
       </mt-swipe>
       </div>
 
-      <div class="all-story">
+      <div class="all-story" v-if="$store.state.scrollDisable">
         <ul v-infinite-scroll="loadMore"
             infinite-scroll-disabled="loading"
-            infinite-scroll-distance="10">
+            infinite-scroll-distance="20">
           <li v-for="item in allStory" :key="item.id">
             <div class="title" @click="open(item.id)">
               <span >{{item.title|lengthControl}}</span>
@@ -32,10 +32,7 @@
           </li>
         </ul>
       </div>
-      <div class="bottom" v-if="show">
-      <img class="loading" src="http://home.gongkong.com/Content/User/NormalUser/images/loadding.gif">
-      </div>
-      <div class="myMessageDiv">
+      <div>
         <mt-popup
           v-model="popupVisible"
           position="right">
@@ -54,6 +51,7 @@
         <mt-popup
           v-model="popupVisibleMenu"
           position="left">
+          <div class="shang">
           <div class="homeDiv" @click="homeEvent">
             <img src="./home.svg" class="homeImg">
             <div class="font">首页<span v-text="afterTB"></span></div>
@@ -65,6 +63,7 @@
           <div class="moreDiv" @click="moreEvent">
             <img src="./more.svg" class="moreImg">
             <div class="font">更多<span v-text="afterTB"></span></div>
+          </div>
           </div>
             <div class="menuContent"></div>
           <div class="setingDiv" @click="setingEvent">
@@ -90,6 +89,7 @@
   import { InfiniteScroll } from 'mint-ui';
   import Sixin from "./sixin";
   import tongzhi from "./tongzhi";
+  import { Indicator } from 'mint-ui';
   Vue.use(InfiniteScroll);
   Vue.component(Loadmore.name, Loadmore);
   Vue.component(Swipe.name, Swipe);
@@ -103,28 +103,30 @@
           allStory: [],
           allStory2: [],
           date: '',
-          show: true,
           popupVisible: false,
           popupVisibleMenu: false,
           afterTB: '>',
           loading: false,
           x: 1,
-          tzsxShow: true
+          tzsxShow: true,
         }
       },
       methods: {
         open(id){
           let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-          window.sessionStorage.setItem("scrollTop", scrollTop.toString())
+          window.sessionStorage.setItem("scrollTop", scrollTop.toString());
+          this.$store.state.scrollDisable = false;
           this.$store.commit('changeShow');
-          this.$store.state.url = '/api/'+id;
+          this.$store.state.url = 'https://zhihu-agent.herokuapp.com/get?api=/4/news/'+id;
         },
         returnHome(){
           this.popupVisible = false;
         },
         ajaxMore() {
           this.getDate();
-          axios.get('/api/before/'+this.date).then(res2=>{
+          Indicator.open();
+          axios.get('https://zhihu-agent.herokuapp.com/get?api=/4/news/before/'+this.date).then(res2=>{
+            Indicator.close();
             for (var i=0;i<res2.data.stories.length;i++){
               this.allStory2.push(res2.data.stories[i]);
             }
@@ -157,18 +159,16 @@
           this.x ++;
         },
         loadMore() {
-          this.loading = true;
           this.ajaxMore();
-          this.loading = false;
         },
         tongzhiEvent(){
-          this.$refs.tongzhiDom.style.borderBottom = '1px solid black';
+          this.$refs.tongzhiDom.style.borderBottom = '0.026rem solid grey';
           this.$refs.sixinDom.style.borderBottom = '';
           this.tzsxShow = true;
         },
         sixinEvent(){
-          this.$refs.sixinDom.style.borderBottom = '1px solid black';
-          this.$refs.tongzhiDom.style.borderBottom = '1px solid transparent';
+          this.$refs.sixinDom.style.borderBottom = '0.026rem solid grey';
+          this.$refs.tongzhiDom.style.borderBottom = '0.026rem solid transparent';
           this.tzsxShow = false;
         },
         requestError(){
@@ -178,7 +178,7 @@
           });
         },
         homeEvent(){
-          window.location.reload();
+          this.popupVisibleMenu = false;
         },
         aboutEvent(){
           MessageBox({
@@ -230,21 +230,24 @@
           }
         }
       },
-      beforeCreate() {
-      },
       updated() {
       },
-      mounted() {
+      beforeMount() {
         this.$store.state.homeUrl = window.location.href;
-        axios.get('/api/latest').then(res1=>{
+        axios.get('https://zhihu-agent.herokuapp.com/get?api=/4/news/latest').then(res1=>{
+          setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('main').style.display = 'block';
+          }, 1000);
           this.date = res1.data.date;
           this.hotStory = res1.data.top_stories;
           this.allStory = res1.data.stories;
-          this.ajaxMore();
         }).catch(err=>{
           this.requestError();
         })
         console.log("请调成iphoneX屏幕以获得最好的体验效果");
+      },
+      mounted() {
       }
     }
 </script>
@@ -267,6 +270,9 @@
   .message{
     right: 0;
   }
+  .shang{
+    margin-top: 1.867rem;
+  }
   .today{
     position: fixed;
     top: 0.267rem;
@@ -285,12 +291,12 @@
 
 .itemImg{
   width: 100%;
-  height: 100%;
+  height: 6.667rem;
 }
 .itemP{
   width: 100%;
   height: 1.333rem;
-  height: 1.333rem;
+  height: 1.533rem;
   display: block;
   background-color: rgba(0,0,0,0.3);
   position: absolute;
@@ -318,9 +324,10 @@
 }
 .all-story ul li .title span{
   width: 6.667rem;
-  height: 0.64rem;
+  height: 0.8rem;
   overflow: hidden;
   padding: 0.533rem;
+  margin-top: -0.133rem;
   display: inline-block;
   font-size: 0.453rem;
 }
@@ -336,6 +343,7 @@
     width: 100%;
   }
 .head{
+  padding-top: 1.067rem;
   width: 10.027rem;
   height: 1.6rem;
 }
@@ -345,7 +353,7 @@
   }
 .head img{
   position: absolute;
-  top: 0.533rem;
+  top: 1.6rem;
   left: 0.267rem;
   width: 0.8rem;
   height: 0.8rem;
@@ -360,7 +368,7 @@
     width: 50%;
     height: 1.067rem;
     font-size: 0.533rem;
-    top: 1.867rem;
+    top: 2.7rem;
     text-align: center;
     line-height: 1.067rem;
     color: black;
@@ -383,15 +391,15 @@
   position: absolute;
 }
 .myMenuDiv .homeImg{
-  top: 0.613rem;
+  top: 2rem;
   left: 0.533rem;
 }
 .myMenuDiv .aboutImg{
-  top: 1.92rem;
+  top: 3.33rem;
   left: 0.533rem;
 }
 .myMenuDiv .moreImg{
-  top: 3.12rem;
+  top: 4.65rem;
   left: 0.533rem;
 }
 .myMenuDiv span{

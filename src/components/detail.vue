@@ -10,7 +10,6 @@
         <p class="itemP">{{msg.title}}</p>
       </div>
       <div class="body" v-html="msg.body"></div>
-
       <mt-popup
         v-model="popupVisible"
         position="bottom">
@@ -22,7 +21,9 @@
             <li><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2716092914,1740098833&fm=26&gp=0.jpg"></li>
             <li><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2584811240,193084535&fm=26&gp=0.jpg"></li>
           </ul>
+          <div class="APPnames">
           <span>微信</span><span>朋友圈</span><span>QQ</span><span>空间</span>
+          </div>
         </div>
       </mt-popup>
     </div>
@@ -44,15 +45,16 @@
       },
       methods: {
           changeShowComp(){
+            this.$store.state.scrollDisable = true;
             this.$store.commit('changeShow');
             this.$store.commit('scrollPosition');
           }
       },
-      beforeCreate() {Indicator.open();},
       mounted() {
+          Indicator.open();
           axios.get(this.$store.state.url).then(res=>{
-            this.msg = res.data;
             Indicator.close();
+            this.msg = res.data;
           }).catch(err=>{
             console.log("获取数据2失败！")
           })
@@ -63,7 +65,7 @@
   .head{
     position: fixed;
     width: 100%;
-    height: 1.333rem;
+    height: 1.3rem;
     background-color: rgba(250,250,250,0.8);
   }
 .box{
@@ -75,7 +77,13 @@
     left: 0.267rem;
     width: 0.8rem;
     height: 0.8rem;
-    margin: 0.133rem;
+    margin: 0.25rem 0.133rem;
+  }
+  .APPnames{
+    transform: translateX(-0.64rem);
+  }
+  .body{
+    margin-top: 1.2rem;
   }
   .right{
     position: fixed;
@@ -86,7 +94,7 @@
   }
 .itemImg{
   width: 100%;
-  height: 100%;
+  height: 6.667rem;
   margin-bottom: -0.267rem;
 }
 .itemP{
@@ -108,7 +116,7 @@
   }
   .share-box{
     width: 10rem;
-    height: 3.467rem;
+    height: 4.5rem;
     background-color: rgba(255,255,255,0.5);
   }
   .share-box p{
@@ -124,8 +132,8 @@
     height: 1.333rem;
   }
   .share-box span{
-    /*margin: 1.867rem;*/
-    padding: 1.02rem;
+    padding-top: 1.333rem;
+    padding-left: 1.333rem;
   }
 </style>
 <style scoped>

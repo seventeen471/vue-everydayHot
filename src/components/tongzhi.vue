@@ -17,13 +17,13 @@
   width: 4rem;
   height: 4rem;
   position: absolute;
-  top: 4rem;
+  top: 5rem;
   left: 3.067rem;
   opacity: 0.2;
 }
   #tongzhi h3{
     position: absolute;
-    top: 8.267rem;
+    top: 9.4rem;
     left: 2.8rem;
     opacity: 0.4;
     text-align: center;
@@ -31,7 +31,7 @@
   }
 #tongzhi article{
   position: absolute;
-  top: 9.067rem;
+  top: 10rem;
   left: 0;
   opacity: 0.5;
   text-align: center;

@@ -7,6 +7,7 @@ const store = new Vuex.Store({
     showComp: true,
     url:'',
     homeUrl: '',
+    scrollDisable: true
   },
   mutations: {
     changeShow(state){
