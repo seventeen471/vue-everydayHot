@@ -8,7 +8,16 @@
 
 <script>
     export default {
-        name: "tongzhi"
+        name: "tongzhi",
+      mounted() {
+        this.$mui.plusReady(() => {
+          this.$mui.back = () => {
+            this.$store.state.scrollDisable = true;
+            this.$store.commit('changeShow');
+            this.$store.commit('scrollPosition');
+          }
+        });
+      }
     }
 </script>
 

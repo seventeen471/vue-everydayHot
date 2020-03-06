@@ -50,7 +50,7 @@
             this.$store.commit('scrollPosition');
           }
       },
-      mounted() {
+      beforeMount() {
           Indicator.open();
           axios.get(this.$store.state.url).then(res=>{
             Indicator.close();
@@ -58,6 +58,13 @@
           }).catch(err=>{
             console.log("获取数据2失败！")
           })
+      },
+      mounted() {
+        this.$mui.plusReady(() => {
+          this.$mui.back = () => {
+            this.changeShowComp();
+          }
+        });
       }
     }
 </script>

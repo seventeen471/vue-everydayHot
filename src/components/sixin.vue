@@ -8,6 +8,15 @@
   import axios from 'axios';
     export default {
         name: "sixin",
+      mounted() {
+        this.$mui.plusReady(() => {
+          this.$mui.back = () => {
+            this.$store.state.scrollDisable = true;
+            this.$store.commit('changeShow');
+            this.$store.commit('scrollPosition');
+          }
+        });
+      }
     }
 </script>
 

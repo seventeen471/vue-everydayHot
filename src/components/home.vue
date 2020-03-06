@@ -196,29 +196,8 @@
           alert("设置功能还未实现")
         },
         quitEvent(){
-          this.closeWebPage();
+          plus.runtime.quit();
         },
-        closeWebPage() {
-          if (navigator.userAgent.indexOf("MSIE") > 0) {
-            //判断是否为ie6
-            if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
-              window.opener = null; window.close();
-            }
-            else {
-              window.open('', '_top'); window.top.close();
-            }
-          }
-          //判断是否为firefox
-          else if (navigator.userAgent.indexOf("Firefox") > 0) {
-            window.location.href = 'about:blank ';
-          }
-          //其他非firefox等主流浏览器如chrome,safari
-          else {
-            window.opener = null;
-            window.open('', '_self', '');
-            window.close();
-          }
-        }
       },
       filters: {
         lengthControl: function(text){
@@ -235,19 +214,31 @@
       beforeMount() {
         this.$store.state.homeUrl = window.location.href;
         axios.get('https://zhihu-agent.herokuapp.com/get?api=/4/news/latest').then(res1=>{
-          setTimeout(() => {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('main').style.display = 'block';
-          }, 1000);
           this.date = res1.data.date;
           this.hotStory = res1.data.top_stories;
           this.allStory = res1.data.stories;
         }).catch(err=>{
           this.requestError();
         })
-        console.log("请调成iphoneX屏幕以获得最好的体验效果");
       },
       mounted() {
+        this.$mui.plusReady( () =>{
+          var backcount = 0;
+          this.$mui.back = ()=> {
+            if (this.$mui.os.ios) return;
+            if (backcount > 0) {
+              if (window.plus) plus.runtime.quit();
+              return;
+            };
+            this.$layer.msg('再点击一次退出应用!')
+            backcount++;
+            setTimeout( () =>{
+              backcount = 0;
+            }, 2000);
+          };
+        })
       }
     }
 </script>

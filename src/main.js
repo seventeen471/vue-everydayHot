@@ -6,8 +6,10 @@ import router from './router'
 import store from'./store'
 import flexible from './flexible'
 import VueJsonp from 'vue-jsonp'
+import mui from '../static/mui.min'
 Vue.use(VueJsonp);
 Vue.use(flexible);
+Vue.use(mui);
 Vue.config.productionTip = false;
 if (module.hot) {
   module.hot.accept();
